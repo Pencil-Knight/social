@@ -6,7 +6,7 @@ const Post = (props) => {
     <div>
       <div className={c.post}>
 			<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZpGRsQalYAzNe26GdGshYmZIlswbZUMgE5LcxCanMcANliiBmrWNjIMiMmBJVp9buWrk&usqp=CAU' />
-			{props.state.proflePage.posts}
+			{props.message}
 			</div>
 			<div>
 				<span>Like</span> {props.like}

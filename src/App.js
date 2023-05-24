@@ -4,7 +4,7 @@ import Profile from "./components/Profile/profile";
 import Header from "./components/Header/header";
 import Nav from "./components/Navbar/nav";
 import Dialogs from "./components/Dialogs/Dialogs";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import News from "./components/News/news";
 import Music from "./components/Music/music";
 import Settings from "./components/Settings/settings";
@@ -21,7 +21,7 @@ const App = (props) => {
             path="/profile"
             element={
               <Profile
-                profilePage={props.state.profilePage.posts}
+								profilePage={props.state.profilePage}
                 addPost={props.addPost}
                 updateNewPostText={props.updateNewPostText}
               />
