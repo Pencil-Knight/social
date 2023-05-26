@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import state, { addPost, subscribe, updateNewPostText } from "./redux/state";
+import state, { addMessage, addPost, subscribe, updateNewMessageText, updateNewPostText } from "./redux/state";
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,13 +15,15 @@ let renderEntireTree = (state) => {
           state={state}
           addPost={addPost}
           updateNewPostText={updateNewPostText}
+          addMessage={addMessage}
+          updateNewMessageText={updateNewMessageText}
         />
       </BrowserRouter>
     </React.StrictMode>
   );
 };
 
-renderEntireTree(state, addPost);
+renderEntireTree(state, addPost, addMessage);
 subscribe(renderEntireTree);
 
 // If you want to start measuring performance in your app, pass a function

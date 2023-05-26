@@ -9,7 +9,7 @@ let state = {
 		{id: 2, message: "What are you doing today?", likeCount: 17},
 		{id: 3, message: "Hahaha", likeCount: 17},
 		{id: 4, message: "Blalalal", likeCount: 17},],
-		newPostText: 'it-kamasutra.com',
+		newPostText: 'Kurva bobr',
 },
 	dialogsPage: {
 	dialogs: [
@@ -26,7 +26,9 @@ let state = {
 		{ id: 4, message: "Yoyoyo" },
 		{ id: 5, message: "Alahu-akbar" },
 		{ id: 6, message: "N.H.Y." },
-	],},
+	],
+		newMessageText: 'Pizda'
+},
 }
 
 export const addPost = () => {
@@ -38,10 +40,23 @@ state.profilePage.newPostText = ''
 renderEntireTree(state)
 }
 
+export const addMessage = () => {
+	let newMessage = {id: 7, 
+		message: state.dialogsPage.newMessageText };
+state.dialogsPage.messages.push(newMessage)
+state.dialogsPage.newMessageText = ''
+renderEntireTree(state)
+}
+
 export const updateNewPostText = (newText) => {
 state.profilePage.newPostText = newText
 renderEntireTree(state)
 }
+
+export const updateNewMessageText = (newMessage) => {
+	state.dialogsPage.newMessageText = newMessage
+	renderEntireTree(state)
+	}
 
 export const subscribe =(observer)=>{
 	renderEntireTree = observer
