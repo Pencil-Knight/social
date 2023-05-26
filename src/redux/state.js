@@ -17,19 +17,17 @@ let state = {
 		{ id: 2, name: "Mama" },
 		{ id: 3, name: "Anton" },
 		{ id: 4, name: "Nastya" },
-		{ id: 5, name: "Stas" },
-	],
+		{ id: 5, name: "Maksouni" },],
 	messages: [
 		{ id: 1, message: "Hello" },
 		{ id: 2, message: "How are you today?" },
 		{ id: 3, message: "YYo" },
 		{ id: 4, message: "Yoyoyo" },
 		{ id: 5, message: "Alahu-akbar" },
-		{ id: 6, message: "N.H.Y." },
-	],
-		newMessageText: 'Pizda'
+		{ id: 6, message: "N.H.Y." },],
+		newMessageText: 'Pizda',
 },
-}
+};
 
 export const addPost = () => {
 	let newPost = {id: 5, 
@@ -40,16 +38,16 @@ state.profilePage.newPostText = ''
 renderEntireTree(state)
 }
 
+export const updateNewPostText = (newText) => {
+	state.profilePage.newPostText = newText
+	renderEntireTree(state)
+}
+
 export const addMessage = () => {
 	let newMessage = {id: 7, 
 		message: state.dialogsPage.newMessageText };
 state.dialogsPage.messages.push(newMessage)
 state.dialogsPage.newMessageText = ''
-renderEntireTree(state)
-}
-
-export const updateNewPostText = (newText) => {
-state.profilePage.newPostText = newText
 renderEntireTree(state)
 }
 
