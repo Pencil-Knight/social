@@ -30,7 +30,8 @@ let MyPosts = (props) => {
 					value={props.newPostText} />
           </div>
           <div>
-            <button onClick={addPost}>Add post</button>
+            <button className={s.button} 
+						onClick={addPost}>Add post</button>
           </div>
         </div>
         <div className={s.posts}>

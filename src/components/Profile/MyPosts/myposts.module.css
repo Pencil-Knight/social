@@ -2,7 +2,6 @@
 	color: cyan;
 }
 
-
 .item{
 	color: darkblue;
 }
@@ -13,4 +12,10 @@
 
 .posts{
 	margin-top: 10px;
+}
+
+.button{
+	color: darkolivegreen;
+	background-color: burlywood;
+	margin: 0;
 }
