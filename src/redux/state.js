@@ -25,7 +25,7 @@ let state = {
 		{ id: 4, message: "Yoyoyo" },
 		{ id: 5, message: "Alahu-akbar" },
 		{ id: 6, message: "N.H.Y." },],
-		newMessageText: 'Pizda',
+		newMessageText: 'Rabotay',
 },
 };
 
