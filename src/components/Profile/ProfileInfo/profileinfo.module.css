@@ -1,3 +1,11 @@
 .item{
 	padding: 10px;
+	font-family: cardo;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 33px;
+}
+.avatar{
+	width: 100px;
+	border-radius: 50px;
 }
